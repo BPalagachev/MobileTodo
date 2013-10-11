@@ -1,0 +1,29 @@
+body {
+    font-size:1.5em;
+}
+listView {
+    width: 100%;
+    overflow: hidden;    
+}
+
+    listView li{
+        
+    }
+
+.todoTable{
+    width: 100%;
+    margin-top: 5px;
+}
+
+.todoTable li{
+    height: 55px;
+}
+
+.button{
+    margin: 0 auto;
+    border: 1px solid black;
+    text-align: center;
+    padding-top: 10px;
+    height: 30px;
+    border-radius: 10px;
+}

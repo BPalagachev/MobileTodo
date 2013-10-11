@@ -1,0 +1,50 @@
+<div id="view-list" data-id="view-list" data-role="view"
+     data-layout="main-layout"
+     data-title="List"
+     data-show="app.viewList.init" >
+    <h2 data-bind="text: title"></h2>
+    <div>
+        <table>
+            <tr>
+                <td>Name: </td>
+                <td>
+                    <input type="text" id="newTodoList"  data-bind="value: currentName">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <div data-role="touch" 
+                         data-tap="app.viewList.handleAddOrUpdate"
+                         class="button">
+                        Add or update
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <ul class="listView"
+        id="todoes" data-id="todoes"
+        data-role="listview"
+        data-bind="source: items"
+        data-template="todoes-template">
+    </ul>
+</div>
+
+<script type="text/x-kendo-template" id="todoes-template">
+    <table class="todoTable"
+           #if(isCompleted){#style="background: green;"#}else{#style="background: red;"#}#
+           id="#=name #"
+           data-role="touch"
+           data-tap="app.viewList.selectCurrentElement">
+        <tr >
+            <td style="width: 100px">Title: </td>
+            <td>#= name #</td>
+        </tr>
+        <tr data-role="touch"
+            data-tap="app.viewList.handleState"
+            id="#=name #">
+            <td style="width: 100px">Completed: </td>
+            <td>#=isCompleted #</td>
+        </tr>
+    </table>
+</script>

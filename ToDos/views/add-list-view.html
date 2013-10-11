@@ -1,0 +1,27 @@
+<div id="add-list-view" data-id="add-list-view" data-role="view"
+     data-layout="main-layout" data-title="Add Todo"
+     data-show="app.addTodoList.init">
+    <h2>Add new List</h2>
+
+    <div>
+        <table>
+            <tr>
+                <td>Name: </td>
+                <td>
+                    <input type="text" id="newTodoList"  data-bind="value: name">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <div data-role="touch" data-tap="app.addTodoList.handleAddList"
+                         class="button">
+                        Add
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div>
+        <input type="text" id="status"  data-bind="value: status" disabled >
+    </div>
+</div>
